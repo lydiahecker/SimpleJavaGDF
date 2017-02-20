@@ -14,12 +14,13 @@ public class GameMain {
 
     public static void main(String[] args) {
         JFrame frame = new JFrame(GAME_TITLE);
-        frame.setLayout(new BorderLayout());
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(GAME_WIDTH,GAME_HEIGHT);
         frame.setResizable(false);
 
-        showCrappyUI(frame);
+        sGame = new Game(GAME_WIDTH,GAME_HEIGHT);
+        frame.add(sGame);
+        frame.pack();
 
         frame.setVisible(true);
     }
@@ -37,25 +38,6 @@ public class GameMain {
         CrappyPanel panel = new CrappyPanel();
         panel.setPreferredSize(new Dimension(480,270));
         frame.add(BorderLayout.CENTER, panel);
-    }
-}
-
-class CrappyPanel extends JPanel {
-    @Override
-    protected void paintComponent(Graphics g) {
-        super.paintComponent(g);
-
-        g.setColor(Color.BLUE);
-        g.fillRect(0,0,100,100);
-
-        g.setColor(Color.GREEN);
-        g.drawRect(50,50,100,100);
-
-        g.setColor(Color.RED);
-        g.drawString("Hello World!", 200, 200);
-
-        g.setColor(Color.black);
-        g.fillOval(250,40,100,30);
     }
 }
 
