@@ -22,6 +22,7 @@ public class MenuState extends State {
 
     @Override
     public void render(Graphics g) {
+        Resources.explosion.loop();
         g.drawImage(Resources.welcome,0,0,null );
     }
 

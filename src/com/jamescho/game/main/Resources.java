@@ -14,8 +14,10 @@ import java.net.URL;
 public class Resources {
 
     public static BufferedImage welcome, iconimage;
+    public static AudioClip explosion;
 
     public static void load() {
+        explosion = loadSound("explosion.mp3");
         welcome = loadImage("welcome.png");
         iconimage = loadImage("iconimage.png");
     }
