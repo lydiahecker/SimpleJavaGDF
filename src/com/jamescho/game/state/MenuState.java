@@ -32,8 +32,8 @@ public class MenuState extends State {
     }
 
     @Override
-    public void onKeyPress(MouseEvent e) {
-
+    public void onKeyPress(KeyEvent e) {
+        System.out.println("Pressed the " + e.getKeyChar() + " key");
     }
 
     @Override

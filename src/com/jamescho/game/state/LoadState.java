@@ -33,7 +33,7 @@ public class LoadState extends State {
     }
 
     @Override
-    public void onKeyPress(MouseEvent e) {
+    public void onKeyPress(KeyEvent e) {
 
     }
 
